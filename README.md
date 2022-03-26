@@ -8,4 +8,4 @@
 I use the gitee link to change the github link. Hoping to find a new approach to fix the network issue.
 
 ### Stuck in reading the newest data...
-Maybe use String to fix it? (try)
+Change the data type to String.

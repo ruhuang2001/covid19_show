@@ -4,7 +4,7 @@ public class LocationStats {
 
 	private String state;
 	private String country;
-	private int latestTotalCases;
+	private String latestTotalCases;
 
 	public String getState() {
 		return state;
@@ -22,11 +22,11 @@ public class LocationStats {
 		this.country = country;
 	}
 
-	public int getLatestTotalCases() {
+	public String getLatestTotalCases() {
 		return latestTotalCases;
 	}
 
-	public void setLatestTotalCases(int latestTotalCases) {
+	public void setLatestTotalCases(String latestTotalCases) {
 		this.latestTotalCases = latestTotalCases;
 	}
 

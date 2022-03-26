@@ -21,8 +21,11 @@ public class CoronaVirusDataService {
 
 	// use the Gitee to change the Github url
 	private static String COVID19_DATA_URI = "https://gitee.com/ruhuang/resources-test/raw/master/who_covid_19_sit_rep_time_series.csv";
-
 	private List<LocationStats> allStats = new ArrayList<>();
+
+	public List<LocationStats> getAllStats() {
+		return allStats;
+	}
 
 	@PostConstruct
 	@Scheduled(cron = "* * 1 * * *")
@@ -40,8 +43,7 @@ public class CoronaVirusDataService {
 			LocationStats locationStats = new LocationStats();
 			locationStats.setState(record.get(0));
 			locationStats.setCountry(record.get(1));
-			locationStats.setLatestTotalCases(Integer.parseInt(record.get(record.size()-1)));
-			System.out.println(locationStats);
+			locationStats.setLatestTotalCases(record.get(record.size()-1));
 			newStats.add(locationStats);
 		}
 		this.allStats = newStats;
